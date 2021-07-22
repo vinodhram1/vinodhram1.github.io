@@ -54,7 +54,7 @@
                 // $.inArray doesn't work with Dates
                 var val = d && d.valueOf();
                 for (var i = 0, l = this.length; i < l; i++)
-                    // Use date arithmetic to allow dates with different times to match
+                // Use date arithmetic to allow dates with different times to match
                     if (0 <= this[i].valueOf() - val && this[i].valueOf() - val < 1000 * 60 * 60 * 24)
                         return i;
                 return -1;
@@ -1011,7 +1011,7 @@
                         // ISO 8601: First week contains first thursday.
                         // ISO also states week starts on Monday, but we can be more abstract here.
                         var
-                            // Start of current week: based on weekstart/current date
+                        // Start of current week: based on weekstart/current date
                             ws = new Date(+prevMonth + (this.o.weekStart - weekDay - 7) % 7 * 864e5),
                             // Thursday of this week
                             th = new Date(Number(ws) + (7 + 4 - ws.getUTCDay()) % 7 * 864e5),
@@ -1053,7 +1053,6 @@
                     clsName = $.unique(clsName);
                 }
 
-                // Creative Tim - we added a div inside each td for design purposes
                 html.push('<td class="' + clsName.join(' ') + '"' + (tooltip ? ' title="' + tooltip + '"' : '') + (this.o.dateCells ? ' data-date="' + prevMonth.getTime().toString() + '"' : '') + '><div>' + prevMonth.getUTCDate() + '</div></td>');
                 tooltip = null;
                 if (weekDay === this.o.weekEnd) {
@@ -1340,6 +1339,7 @@
                     // If going back one month, make sure month is not current month
                     // (eg, Mar 31 -> Feb 31 == Feb 28, not Mar 02)
                     ?
+
                     function() {
                         return new_date.getUTCMonth() === month;
                     }
@@ -1356,7 +1356,7 @@
             } else {
                 // For magnitudes >1, move one month at a time...
                 for (var i = 0; i < mag; i++)
-                    // ...which might decrease the day (eg, Jan 31 to Feb 28, etc)...
+                // ...which might decrease the day (eg, Jan 31 to Feb 28, etc)...
                     new_date = this.moveMonth(new_date, dir);
                 // ...then reset the day, keeping it in the new month
                 new_month = new_date.getUTCMonth();
