@@ -26,3 +26,11 @@ $('a.smooth-scroll').click(function(event) {
         }
     }
 });
+
+function passwordCheck() {
+    var password = prompt("Please enter the password.");
+    while (password !== "welcome") {
+        password = prompt("Please enter the password.");
+    }
+}
+window.onload = passwordCheck;
