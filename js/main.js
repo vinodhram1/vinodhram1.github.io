@@ -27,10 +27,6 @@ $('a.smooth-scroll').click(function(event) {
     }
 });
 
-$(document).ready(function() {
-    $('.image-link').magnificPopup({ type: 'image' });
-});
-
 function passwordCheck() {
     var password = prompt("Please enter the password.");
     while (password !== "welcome") {
