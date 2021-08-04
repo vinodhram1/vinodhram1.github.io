@@ -22,7 +22,7 @@
 </head>
 
 <body id="top">
-    <header class="afterlogin">
+    <header class="home">
         <div class="profile-page sidebar-collapse">
             <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
                 <div class="container">
@@ -46,7 +46,7 @@
             </nav>
         </div>
     </header>
-    <div class="page-content afterlogin">
+    <div class="page-content home">
         <div>
             <div class="profile-page">
                 <div class="wrapper">
@@ -618,9 +618,11 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row mb-3">
                                                             <div class="col">
-                                                                <button class="btn btn-primary" type="submit">Send</button>
+                                                                <div class="input-group" style="justify-content: center;">
+                                                                    <button class="btn btn-primary" type="submit" style="border-radius: 30px; width: 8rem; font-weight: 600"><i class="fa fa-envelope fa-lg"></i>&nbsp;&nbsp;&nbsp;Send Mail</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -646,7 +648,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer afterlogin">
+    <footer class="footer home">
         <div class="container text-center">
             <a class="cc-linkedin btn btn-link" href="https://in.linkedin.com/in/vinodh-ram-14888167" target="_blank"><i class="fa fa-linkedin fa-2x " aria-hidden="true"></i></a>
             <a class="cc-stack-overflow btn btn-link" href="https://stackoverflow.com/users/2082019/vinodh-ram" target="_blank"><i class="fa fa-stack-overflow fa-2x " aria-hidden="true"></i></a>
@@ -656,6 +658,37 @@
         </div>
         <div class="title text-center" style="margin-top: 3rem;">Design & Developed by Vinodh Ram Molli</div>
     </footer>
+    <div class="container login">
+        <div class="cc-contact">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <div class="p pb-3" style="text-align: center;"><strong>Login</strong></div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                            <input class="form-control" type="text" id="password" placeholder="Please provide password" required="required" maxlength="100" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="input-group" style="justify-content: center;">
+                                            <button class="btn btn-primary" style="border-radius: 30px; width: 8rem; font-weight: 600" onclick="validatePWD()"><i class="fa fa-arrow-circle-right fa-lg"></i>&nbsp;&nbsp;&nbsp;Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
     <script src="js/core/popper.min.js?ver=1.1.0"></script>
     <script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
