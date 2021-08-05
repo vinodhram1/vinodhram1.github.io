@@ -85,3 +85,15 @@ function loadHTML(param) {
         }
     }
 }
+
+var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("awardModal");
+
+function viewAward(fileName) {
+    var modalImg = document.getElementById("awardImage");
+    modal.style.display = "block";
+    modalImg.src = 'images/' + fileName;
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
