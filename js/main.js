@@ -30,19 +30,19 @@ $('a.smooth-scroll').click(function(event) {
 });
 
 function passwordCheck() {
-    var data = localStorage.getItem('data');
-    if (data) {
-        data = JSON.parse(data);
-        var pwdDate = new Date(data.date);
-        if (data.pwd === pwd && (new Date() - pwdDate) / (1000 * 60 * 60 * 24) < 1) {
-            loadHTML('home');
-        } else {
-            loadHTML('login');
-        }
-    } else {
-        loadHTML('login');
-    }
-
+    // var data = localStorage.getItem('data');
+    // if (data) {
+    //     data = JSON.parse(data);
+    //     var pwdDate = new Date(data.date);
+    //     if (data.pwd === pwd && (new Date() - pwdDate) / (1000 * 60 * 60 * 24) < 1) {
+    //         loadHTML('home');
+    //     } else {
+    //         loadHTML('login');
+    //     }
+    // } else {
+    //     loadHTML('login');
+    // }
+    loadHTML('home');
 }
 window.onload = passwordCheck;
 
