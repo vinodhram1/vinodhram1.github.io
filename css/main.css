@@ -1405,9 +1405,9 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 
 .btn.btn-icon.btn-lg,
 .navbar .navbar-nav>a.btn.btn-icon.btn-lg {
-    height: 3.2rem;
-    min-width: 3.2rem;
-    width: 3.2rem;
+    height: 3rem;
+    min-width: 3rem;
+    width: 3rem;
     background: #1877f2;
 }
 
