@@ -1,10 +1,10 @@
 var pwd = 'welcome';
 
-$(document).ready(function() {
+$(document).ready(function () {
     AOS.init({});
 });
 
-$('a.smooth-scroll').click(function(event) {
+$('a.smooth-scroll').click(function (event) {
     if (
         location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
         location.hostname == this.hostname
@@ -15,7 +15,7 @@ $('a.smooth-scroll').click(function(event) {
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top
-            }, 1000, function() {
+            }, 1000, function () {
                 var $target = $(target);
                 $target.focus();
                 if ($target.is(":focus")) {
@@ -46,7 +46,7 @@ function passwordCheck() {
 }
 window.onload = passwordCheck;
 
-$("#password").keyup(function(event) {
+$("#password").keyup(function (event) {
     if (event.keyCode === 13) {
         validatePWD();
     }
@@ -94,6 +94,10 @@ function viewAward(fileName) {
     modal.style.display = "block";
     modalImg.src = 'images/' + fileName;
 }
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
+}
+
+function closeNav() {
+    document.getElementById('close_button_id').click();
 }
