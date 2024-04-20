@@ -1,5 +1,3 @@
-var pwd = 'welcome';
-
 $(document).ready(function () {
     AOS.init({});
 });
@@ -28,63 +26,6 @@ $('a.smooth-scroll').click(function (event) {
         }
     }
 });
-
-function passwordCheck() {
-    // var data = localStorage.getItem('data');
-    // if (data) {
-    //     data = JSON.parse(data);
-    //     var pwdDate = new Date(data.date);
-    //     if (data.pwd === pwd && (new Date() - pwdDate) / (1000 * 60 * 60 * 24) < 1) {
-    //         loadHTML('home');
-    //     } else {
-    //         loadHTML('login');
-    //     }
-    // } else {
-    //     loadHTML('login');
-    // }
-    loadHTML('home');
-}
-window.onload = passwordCheck;
-
-$("#password").keyup(function (event) {
-    if (event.keyCode === 13) {
-        validatePWD();
-    }
-});
-
-function validatePWD() {
-    var password = document.getElementById('password').value;
-    if (!password) {
-        alert('Please Enter Password');
-    } else if (password !== pwd) {
-        alert('Invalid Password');
-    } else {
-        loadHTML('home');
-        localStorage.setItem('data', JSON.stringify({ 'pwd': pwd, date: new Date() }));
-    }
-}
-
-function loadHTML(param) {
-    if (param === 'home') {
-        var elements = document.getElementsByClassName('home');
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.display = 'block';
-        }
-        elements = document.getElementsByClassName('login');
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.display = 'none';
-        }
-    } else {
-        var elements = document.getElementsByClassName('home');
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.display = 'none';
-        }
-        elements = document.getElementsByClassName('login');
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.display = 'block';
-        }
-    }
-}
 
 function closeNav() {
     document.getElementById('close_button_id').click();
