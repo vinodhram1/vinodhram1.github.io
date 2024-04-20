@@ -1034,11 +1034,13 @@
     </div>
     <div id="downloadOptions" class="modal" style="text-align: center;">
         <span class="close" onclick="closePopup('downloadOptions')">&times;</span>
-        <a href="resumes/Vinodh_Ram_CV_Elegant.pdf" download><button class="download-button">Elegant</button></a><br>
+        <a href="resumes/Vinodh_Ram_CV_Elegant.pdf" download><button class="download-button"
+                onclick="closePopup('downloadOptions')">Elegant</button></a><br>
         <a href="resumes/Vinodh_Ram_CV_Simplified.pdf" download>
-            <button class="download-button">Simplified</button>
+            <button class="download-button" onclick="closePopup('downloadOptions')">Simplified</button>
         </a><br>
-        <a href="resumes/Vinodh_Ram_CV_Detailed.pdf" download><button class="download-button">Detailed</button></a>
+        <a href="resumes/Vinodh_Ram_CV_Detailed.pdf" download><button class="download-button"
+                onclick="closePopup('downloadOptions')">Detailed</button></a>
     </div>
 </body>
 
