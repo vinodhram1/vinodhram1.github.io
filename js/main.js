@@ -86,18 +86,23 @@ function loadHTML(param) {
     }
 }
 
-var span = document.getElementsByClassName("close")[0];
-var modal = document.getElementById("awardModal");
+function closeNav() {
+    document.getElementById('close_button_id').click();
+}
 
 function viewAward(fileName) {
+    var modal = document.getElementById("awardModal");
     var modalImg = document.getElementById("awardImage");
     modal.style.display = "block";
     modalImg.src = 'images/' + fileName;
 }
-span.onclick = function () {
-    modal.style.display = "none";
+
+function CVPopup() {
+    var modal = document.getElementById("downloadOptions");
+    modal.style.display = 'block';
 }
 
-function closeNav() {
-    document.getElementById('close_button_id').click();
+function closePopup(elementId) {
+    var modal = document.getElementById(elementId);
+    modal.style.display = "none";
 }

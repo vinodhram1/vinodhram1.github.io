@@ -85,7 +85,7 @@
                                     data-aos-anchor="data-aos-anchor">
                                     Hire Me
                                 </a>
-                                <a class="btn btn-primary smooth-scroll mr-2" href="static/VinodhRamCV.pdf" download
+                                <a class="btn btn-primary smooth-scroll mr-2" href="javascript:CVPopup()" download
                                     data-aos="zoom-in" data-aos-anchor="data-aos-anchor">
                                     Download CV
                                 </a>
@@ -95,8 +95,8 @@
                             <div class="container">
                                 <div class="button-container">
                                     <a class="btn btn-default btn-round btn-lg btn-icon"
-                                        href="https://in.linkedin.com/in/vinodh-ram-molli" target="_blank"
-                                        rel="tooltip" title="Follow me on Linkedin">
+                                        href="https://in.linkedin.com/in/vinodh-ram-molli" target="_blank" rel="tooltip"
+                                        title="Follow me on Linkedin">
                                         <i class="fa fa-linkedin"></i>
                                     </a>
                                     <a class="btn btn-default btn-round btn-lg btn-icon"
@@ -972,8 +972,16 @@
         </div>
     </div>
     <div id="awardModal" class="modal">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closePopup('awardModal')">&times;</span>
         <img class="modal-content" id="awardImage">
+    </div>
+    <div id="downloadOptions" class="modal" style="text-align: center;">
+        <span class="close" onclick="closePopup('downloadOptions')">&times;</span>
+        <a href="static/Vinodh_Ram_CV_Elegant.pdf" download><button class="download-button">Elegant</button></a><br>
+        <a href="static/Vinodh_Ram_CV_Simplified.pdf" download>
+            <button class="download-button">Simplified</button>
+        </a><br>
+        <a href="static/Vinodh_Ram_CV_Detailed.pdf" download><button class="download-button">Detailed</button></a>
     </div>
     <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
     <script src="js/core/popper.min.js?ver=1.1.0"></script>
