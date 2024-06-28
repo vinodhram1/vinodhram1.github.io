@@ -38,10 +38,10 @@ function viewAward(fileName) {
     modalImg.src = 'images/' + fileName;
 }
 
-function CVPopup() {
-    var modal = document.getElementById("downloadOptions");
-    modal.style.display = 'block';
-}
+// function CVPopup() {
+//     var modal = document.getElementById("downloadOptions");
+//     modal.style.display = 'block';
+// }
 
 function closePopup(elementId) {
     var modal = document.getElementById(elementId);
